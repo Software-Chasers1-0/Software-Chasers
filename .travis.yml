@@ -32,4 +32,4 @@ after_script:
   - php coveralls.phar --verbose
 after_success:
   coveralls
-  - "phpunit --testsuite=unit --coverage-clover coverage.xml"
+  #- "phpunit --testsuite=unit --coverage-clover coverage.xml"
