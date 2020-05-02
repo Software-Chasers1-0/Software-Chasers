@@ -1,1 +1,52 @@
+#sudo: false
+
+#language: node_js
+
+#node_js:
+#  -node
+
+#install:
+#  -npm ci
+
+#script:
+#  -npm run lint
+#  -npm run test: coveralls
+
+#notificatiom:
+#  email: false */ 
+language: php
+php:
+  - 7.3
+services:
+  - mysql
+before_script:
+  - travis_retry composer self-update
+  - composer install
+  - mysql -u root -e "CREATE DATABASE database1;"
+  - mysql -u root -e "CREATE user 'user'@'localhost' IDENTIFIED BY 'password';"
+  - mysql -u root -e "GRANT ALL ON database1.* TO 'user'@'localhost';"
+script:language: php
+php:
+  - 7.3
+services:
+  - mysql
+before_script:
+  - travis_retry composer self-update
+  - composer install
+  - mysql -u root -e "CREATE DATABASE database1;"
+  - mysql -u root -e "CREATE user 'user'@'localhost' IDENTIFIED BY 'password';"
+  - mysql -u root -e "GRANT ALL ON database1.* TO 'user'@'localhost';"
+script:
+  - "phpunit --testsuite=unit --coverage-clover coverage.xml"
+after_script:
+  - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+  - php coveralls.phar --verbose
+after_success:
+  coveralls
+  - "phpunit --testsuite=unit --coverage-clover coverage.xml"
+after_script:
+  - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+  - php coveralls.phar --verbose
+after_success:
+  coveralls
 
