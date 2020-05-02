@@ -1,0 +1,215 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.s01 {
+  min-height: 100vh;
+  display: -ms-flexbox;
+  /*display: flex;
+  /*-ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;*/
+  font-family: 'Poppins', sans-serif;
+  background: url("../images/Search_001.png");
+  background-size: cover;
+  background-position: center center;
+  padding: 15px;
+}
+
+.s01 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  /*border: 2px #2d62d3 solid;*/
+  width: 100%;
+  /*max-width: 1290px;*/
+}
+.s01 header .home-icon {
+  /*background-color: #4c4c4c;
+  border: #2d62d3 1px solid;*/
+  margin-right: 20px;
+
+  /*width: 35px;
+  height: 35px;*/
+}
+
+
+.s01 form {
+  width: 70%;
+  /*max-width: 1290px;*/
+}
+
+.s01 form .inner-form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 47px;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.s01 form .inner-form .input-field {
+  margin-right: 30px;
+  height: 40px;
+}
+
+.s01 form .inner-form .input-field input {
+  height: 100%;
+  background: #fff;
+  border-radius: .5px;
+  border: 0;
+  display: block;
+  width: 100%;
+  padding: 10px 32px;
+  font-size: 20px;
+}
+
+.s01 form .inner-form .input-field input.placeholder {
+  color: #9a9a9a;
+  font-size: 20px;
+}
+
+.s01 form .inner-form .input-field input:-moz-placeholder {
+  color: #9a9a9a;
+  font-size: 20px;
+}
+
+.s01 form .inner-form .input-field input::-webkit-input-placeholder {
+  color: #9a9a9a;
+  font-size: 20px;
+}
+
+.s01 form .inner-form .input-field input:hover, .s01 form .inner-form .input-field input:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+.s01 form .inner-form .input-field.first-wrap {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+.s01 form .inner-form .input-field.second-wrap {
+  width: 32.77%;
+  min-width: 180px;
+}
+
+.s01 form .inner-form .input-field.third-wrap {
+  width: 180px;
+  margin-right: 0;
+}
+
+.s01 form .inner-form .input-field.third-wrap .btn-search {
+  height: 100%;
+  width: 100%;
+  background: #4272d7;
+  white-space: nowrap;
+  border-radius: .5px;
+  font-size: 20px;
+  color: #fff;
+  transition: all .2s ease-out, color .2s ease-out;
+  border: 0;
+  cursor: pointer;
+}
+
+.s01 form .inner-form .input-field.third-wrap .btn-search:hover {
+  background: #2d62d3;
+}
+.s01 header  .right-side {
+  /*border: 1px black solid;*/
+  padding: 10px;
+}
+.s01 header  .right-side a {
+  /*border: #2d62d3 2px solid;*/
+  font-family: 'Poppins', sans-serif;
+  /*border-radius: 20px;*/
+  padding: 10px;
+  margin: 10px;
+  /*width: 10%;*/
+  color: #9a9a9a;
+}
+
+.container {
+  margin: 40px auto;
+  margin-left: 10px;
+  /*width: 90%;*/
+  /*border: 2px black solid;*/
+}
+
+.container nav {
+  /*border: solid black 1px;*/
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.container nav button {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: -5px;
+  background-color: #4272d7;/*#4272d7;*/
+  border-color: #2d82d3;
+  font-size: large;
+}
+/*.container nav button:hover {
+  background-color: #4292c5;
+  border-color: #2d72d3;
+}*/
+
+.search-cover {
+  /*border: 1px solid grey;*/
+  margin: auto 100px;
+}
+
+.books-cover {
+  /*border: 1px grey solid;*/
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 690px;
+  overflow: auto;
+  /*justify-content: space-between;*/
+}
+
+.books {
+  /*align-items: center;*/
+  text-align: center;
+  width: 150px;
+  height: 210px;
+  border: 1px rgba(50,50,50,.1) solid;
+  margin: 10px;
+  border-radius: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-shadow: 5px 5px 3px rgba(50,50,50,.5);
+  /*color: #222;*/
+  font-size: 14px;
+  text-shadow: 0px 0px 2px grey;
+}
+
+.books img {
+  margin-top: 13px;
+}
+
+.books a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
