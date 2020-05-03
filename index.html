@@ -1,79 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
-
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="colorlib.com">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <link href="css/index.css" rel="stylesheet" />
+  <link href="css/dropdown.css" rel="stylesheet" type="text/css" />
+  <title>Home</title>
 </head>
+
 <body>
 
-    <div class="main">
+  <div class="s01">
 
-        <div class="container">
-            <div class="signup-content">
-                <form method="POST" id="signup-form" class="signup-form" name="signup-form" >
-                    <h2>Sign up </h2>
-                    <!--<p class="desc">to get discount 10% when pre - order <span>“Batman Beyond”</span></p>-->
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="username" id="name" placeholder="Your Name"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" name="email" id="email" placeholder="Email"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
-                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign up" onclick='return(register())'/>
-                        <a class="submit-link submit" onclick='return(doLogin())' >Sign in</a>
-                    </div>
-                </form>
-
-
-                <form method="POST" id="login-form" class="login-form" name="login-form" >
-                    <h2>Sign in </h2>
-                    <!--<p class="desc">to get discount 10% when pre - order <span>“Batman Beyond”</span></p>-->
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="username" id="name" placeholder="UserName"/>
-                    </div>
-                    <!--<div class="form-group">
-                        <input type="email" class="form-input" name="email" id="email" placeholder="Email"/>
-                    </div>-->
-                    <div class="form-group">
-                        <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
-                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="submit" id="submit" class="form-submit submit" value="Sign in" onclick='return(login())'/>
-                        <a href="#" class="submit-link submit" onclick='return(doRegister())'>Sign up</a>
-                    </div>
-                </form>
-
-
-            </div>
+    <header class="header">
+      <div class="left-side">
+        <a class="home-icon" href="#">
+          <img src="images/home.svg" alt="home" width="32" height="32"/>
+        </a>
+      </div>
+      <form>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <input id="search" type="text" placeholder="Search" />
+          </div>
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="button">Search</button>
+          </div>
         </div>
+      </form>
+      <div class="right-side">
+        <a href="signup.html?" id="signup">SignUp</a>
+        <a href="signup.html" id="login"> Login</a>
+      </div>
+    </header>
 
+    <div class="container" id="main" role="main">
+      <nav>
+        <ul class="menu">
+          <!--<li><a href="#">Home</a></li>-->
+          <li><a id="icon" href="#s1"><img src="images/open-menu.svg" alt="home" width="30" height="30"/></a>
+            <ul class="submenu">
+              <li>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Submenu a</a>
+              </li>
+              <li>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Submenu b</a>
+              </li>
+              <li>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Submenu c</a>
+              </li>
+              <li>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Submenu d</a>
+              </li>
+              <li>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Submenu e</a>
+              </li>
+              <li>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Submenu f</a>
+              </li>
+              <li>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Submenu g</a>
+              </li>
+              <li>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Submenu h</a>
+              </li>
+              
+            </ul>
+          </li>
+          <!--<li class="active"><a href="#s2">Menu 2</a>
+          <ul class="submenu">
+            <li><a href="#">Submenu a</a></li>
+            <li><a href="#">Submenu b</a></li>
+            <li><a href="#">Submenu c</a></li>
+            <li><a href="#">Submenu d</a></li>
+            <li><a href="#">Submenu e</a></li>
+            <li><a href="#">Submenu f</a></li>
+            <li><a href="#">Submenu g</a></li>
+            <li><a href="#">Submenu h</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Menu 3</a>
+          <ul class="submenu">
+            <li><a href="#">Submenu a</a></li>
+            <li><a href="#">Submenu b</a></li>
+            <li><a href="#">Submenu c</a></li>
+            <li><a href="#">Submenu d</a></li>
+            <li><a href="#">Submenu e</a></li>
+            <li><a href="#">Submenu f</a></li>
+            <li><a href="#">Submenu g</a></li>
+            <li><a href="#">Submenu h</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Menu 4</a></li>
+        <li><a href="http://www.script-tutorials.com/whirling-dropdown-menu/">Back to tutorial</a></li>-->
+        </ul>
+        <button type="button" onclick="window.location.href='sell.html'" >
+          sell
+        </button>
+      </nav>
+      <div class="search-cover">
+        <h2><u>Recently Uploaded</u></h2>
+        <div class="books-cover">
+          <div class="books">
+              <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+              <a>Thomas Calculus 13th edition</a> <br />
+              <a>R200</a>
+            
+          </div>
+        </a>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- JS -->
-    <!--<script src="vendor/jquery/jquery.min.js"></script>
-    <script src="js/main.js"></script>-->
-     <script src="js/index.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+  </div>
+
+</body>
+
 </html>
