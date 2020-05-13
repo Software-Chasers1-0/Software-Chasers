@@ -1,8 +1,8 @@
 {
     "autoload": {
         "psr-4": {
-            "SoftwareChasers1\\SoftwareChasers\\": "php/",
-            "SoftwareChasers1\\SoftwareChasers\\Tests\\": "tests/"
+            "SoftwareChasers10\\SoftwareChasers\\": "php/",
+            "SoftwareChasers10\\SoftwareChasers\\Tests\\": "tests/"
         }
     },
     "require-dev": {
