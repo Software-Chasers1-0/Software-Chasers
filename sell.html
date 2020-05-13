@@ -4,6 +4,7 @@
     <title>Educational registration form</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="js/upload.js"></script>
     <style>
       html, body {
       min-height: 100%;
@@ -132,35 +133,31 @@
           <a class="btn-item" href="https://www.w3docs.com/quiz/#">Select Quiz</a>
         </div>-->
       </div>
-      <script src="js/upload.js"></script>
       
-      <form name="book-form"  >
+      <form name="book-form" action="/" onsubmit="return(upload())" >
         <div class="title">
           <i class="fas fa-pencil-alt"></i> 
           <h2>Register here</h2>
         </div>
         <div class="info">
-          <input class="fname" type="text" name="bookname" placeholder="Book name">
+          <input class="fname" type="text" name="bookname" placeholder="Book name" required>
           <input type="text" name="author" placeholder="Author">
-          <input type="text" name="price" placeholder="Price">
-          <input type="password" name="isbn" placeholder="ISBN">
-          <!--<select>
-            <option value="course-type" selected>Course type*  </option>
-            <option value="short-courses">Short courses  </option>
-            <option value="featured-courses">Featured courses </option>
-            <option value="undergraduate">Undergraduate  </option>
-            <option value="diploma">Diploma  </option>
-            <option value="certificate">Certificate  </option>
-            <option value="masters-degree">Masters degree  </option>
-            <option value="postgraduate">Postgraduate  </option>
-          </select>-->
+          <input type="text" name="price" placeholder="Price" required>
+          <input type="text" name="isbn" placeholder="ISBN">
+          <select name="faculty" required>
+            <option disabled selected>Faculty*</option>
+            <option value="short-courses">Science</option>
+            <option value="featured-courses">Law</option>
+            <option value="undergraduate">Health</option>
+            <option value="diploma">Commerce</option>
+            <option value="certificate">Engineering</option>
+            <option value="masters-degree">Humanities</option>
+          </select>
+          <input type="text" name="school" placeholder="School" required>
           Image
           <input type="file" name="fileupload" id="fileupload"  multiple>
         </div>
-        <!--<div class="checkbox">
-          <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Poalicy for W3Docs.</a></span>
-        </div>-->
-        <button type="submit" onclick="return(upload())">Submit</button>
+        <button type="submit" >Submit</button>
       </form>
     </div>
     

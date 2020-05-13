@@ -9,10 +9,11 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
   <link href="css/index.css" rel="stylesheet" />
   <link href="css/dropdown.css" rel="stylesheet" type="text/css" />
+  <script src="js/index.js"></script>
   <title>Home</title>
 </head>
 
-<body>
+<body onload="return(onload())">
 
   <div class="s01">
 
@@ -22,13 +23,13 @@
           <img src="images/home.svg" alt="home" width="32" height="32"/>
         </a>
       </div>
-      <form>
+      <form name="search" onsubmit="return(loadbooks())">
         <div class="inner-form">
           <div class="input-field first-wrap">
-            <input id="search" type="text" placeholder="Search" />
+            <input id="search" name="search" type="text" placeholder="Search" />
           </div>
           <div class="input-field third-wrap">
-            <button class="btn-search" type="button">Search</button>
+            <button class="btn-search" type="submit">Search</button>
           </div>
         </div>
       </form>
@@ -45,232 +46,40 @@
           <li><a id="icon" href="#s1"><img src="images/open-menu.svg" alt="home" width="30" height="30"/></a>
             <ul class="submenu">
               <li>
-                <ul class="subcategory">
-                  <li><a href="#">Submenu a</a></li>
-                  <li><a href="#">Submenu b</a></li>
-                  <li><a href="#">Submenu c</a></li>
-                  <li><a href="#">Submenu d</a></li>
-                  <li><a href="#">Submenu e</a></li>
-                </ul>
-                <a href="#">Science</a>
+                <ul class="subcategory" id="1"></ul>
+                <a href="#" onclick="loadbooks('Science')">Science</a>
               </li>
               <li>
-                <ul class="subcategory">
-                  <li><a href="#">Animal, Plant and Environmental Sciences</a></li>
-                  <li><a href="#">Chemistry</a></li>
-                  <li><a href="#">Computer Science and Applied Mathematics</a></li>
-                  <li><a href="#">Geography, Archaeology and Environmental Studies</a></li>
-                  <li><a href="#">Geoscience</a></li>
-                  <li><a href="#">Mathematics</a></li>
-                  <li><a href="#">Molecular and cell biology</a></li>
-                  <li><a href="#">Physics</a></li>
-                  <li><a href="#">Statistics and Actuarial Science</a></li>
-                </ul>
-                <a href="#">Commerce,Law and Management</a>
+                <ul class="subcategory" id="3"></ul>
+                <a href="#" onclick="loadbooks('Law')">Law</a>
               </li>
               <li>
-                <ul class="subcategory">
-                  <li><a href="#">Accountancy</a></li>
-                  <li><a href="#">Law</a></li>
-                  <li><a href="#">Economics and Finance</a></li>
-                  <li><a href="#">Business Science</a></li>
-                  <li><a href="#">Business School</a></li>
-                  <li><a href="#">WSG</a></li>
-                  <li><a href="#">Wits Plus</a></li>
-                </ul>
-                <a href="#">Health Sciences</a>
+                <ul class="subcategory" id="2"></ul>
+                <a href="#" onclick="loadbooks('health')">health</a>
               </li>
               <li>
-                <ul class="subcategory">
-                  <li><a href="#">Clinical Medicine</a></li>
-                  <li><a href="#">Anatomical Sciences</a></li>
-                  <li><a href="#">Oral Health Sciences</a></li>
-                  <li><a href="#">Pathelogy</a></li>
-                </ul>
-                <a href="#">Engineering and the Built Environment</a>
+                <ul class="subcategory" id="4"></ul>
+                <a href="#" onclick="loadbooks('Commerce')">Commerce</a>
               </li>
               <li>
-                <ul class="subcategory">
-                  <li><a href="#">Architecture and Planning</a></li>
-                  <li><a href="#">Civil and Environmental Eginnering</a></li>
-                  <li><a href="#">Chemical and Metallurgical Engineering</a></li>
-                  <li><a href="#">Construction Economics and Management</a></li>
-                  <li><a href="#">Electrical and Information Engineering</a></li>
-                  <li><a href="#">Mechanical, Industrial, Aeronautical Engineering</a></li>
-                  <li><a href="#">Mining Engineering</a></li>
-                </ul>
-                <a href="#">Humanities</a>
+                <ul class="subcategory" id="5"></ul>
+                <a href="#" onclick="loadbooks('Engineering')">Engineering</a>
               </li>
               <li>
-                <ul class="subcategory">
-                  <li><a href="#">Arts</a></li>
-                  <li><a href="#">Education</a></li>
-                  <li><a href="#">Human and Community Development</a></li>
-                  <li><a href="#">Literature, Language and Media</a></li>
-                  <li><a href="#">Social Sciences</a></li>
-                </ul>
-                <!--<a href="#">Humanities</a>-->
+                <ul class="subcategory" id="6"></ul>
+                <a href="#" onclick="loadbooks('Humanities')">Humanities</a>
               </li>
               
             </ul>
           </li>
-          <!--<li class="active"><a href="#s2">Menu 2</a>
-          <ul class="submenu">
-            <li><a href="#">Submenu a</a></li>
-            <li><a href="#">Submenu b</a></li>
-            <li><a href="#">Submenu c</a></li>
-            <li><a href="#">Submenu d</a></li>
-            <li><a href="#">Submenu e</a></li>
-            <li><a href="#">Submenu f</a></li>
-            <li><a href="#">Submenu g</a></li>
-            <li><a href="#">Submenu h</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Menu 3</a>
-          <ul class="submenu">
-            <li><a href="#">Submenu a</a></li>
-            <li><a href="#">Submenu b</a></li>
-            <li><a href="#">Submenu c</a></li>
-            <li><a href="#">Submenu d</a></li>
-            <li><a href="#">Submenu e</a></li>
-            <li><a href="#">Submenu f</a></li>
-            <li><a href="#">Submenu g</a></li>
-            <li><a href="#">Submenu h</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Menu 4</a></li>
-        <li><a href="http://www.script-tutorials.com/whirling-dropdown-menu/">Back to tutorial</a></li>-->
         </ul>
         <button type="button" onclick="window.location.href='sell.html'" >
           sell
         </button>
       </nav>
       <div class="search-cover">
-        <h2><u>Recently Uploaded</u></h2>
-        <div class="books-cover">
-          <div class="books">
-              <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-              <a>Thomas Calculus 13th edition</a> <br />
-              <a>R200</a>
-            
-          </div>
-        </a>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-          <div class="books">
-            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
-            <a>Thomas Calculus 13th edition</a> <br />
-            <a>R200</a>
-          </div>
-        </div>
+        <h2 id="heading"><u>Recently Uploaded</u></h2>
+        <div class="books-cover" id="books-cover"></div>
       </div>
     </div>
 
