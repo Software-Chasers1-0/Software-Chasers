@@ -1,6 +1,6 @@
 <?php
 /**
- * @coversDefaultClass \SoftwareChasers10\Software-Chasers\init
+ * @coversDefaultClass \SoftwareChasers10\SoftwareChasers\init
  */
 class initTest extends PHPUnit\Framework\TestCase{
   protected $hello;
