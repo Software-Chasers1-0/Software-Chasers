@@ -1,4 +1,5 @@
 <?php
+use PHPUnit\Framework\TestCase;
 /**
  * @coversDefaultClass \Software-Chasers1\Software-Chasers\init
  */
