@@ -13,6 +13,8 @@
     $author = $_POST['author'];
     $price = $_POST['price'];
     $isbn = $_POST['isbn'];
+    $faculty = $_POST['faculty'];
+    $school = $_POST['school'];
     
     $fileName = $_FILES['file']['name'];
     $fileType = $_FILES['file']['type'];
@@ -29,10 +31,19 @@
     //echo $json;
     //echo "<br />something " . price;
     #echo "now". $user. "thats ric";
-    $result = mysqli_query($link,"INSERT INTO books (book_isbn, book_name, book_author, book_price, book_image, user_id) VALUES ('$isbn','$bookname', '$author', $price, '$dataUrl','2')");
+    $result = mysqli_query($link,
+        "INSERT INTO books (book_isbn, book_name, book_author, book_price, book_image, user_id) 
+        VALUES ('$isbn','$bookname', '$author', '$price', '$dataUrl','2')");
+    if($result != false) {
+        mysqli_query($link,"INSERT IGNORE INTO SubCategories (category_id, subcategory_name) 
+            VALUES ((SELECT category_id FROM Categories WHERE category_name = '$faculty'),'$school')");
+        mysqli_query($link,"UPDATE books SET subcategory_id =
+            (SELECT subcategory_id FROM SubCategories WHERE subcategory_name = '$school') WHERE subcategory_id = '0'");
+    }
+        
     $link->close();
     #echo "connected successfully <br />";
-    echo json_encode($result);
+    //echo json_encode($result);
     $arr = array();
     while ($row = mysqli_fetch_assoc($result)) 
     {
