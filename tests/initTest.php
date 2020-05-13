@@ -1,13 +1,13 @@
 <?php
 use PHPUnit\Framework\TestCase;
 /**
- * @coversDefaultClass \Software-Chasers1\Software-Chasers\init
+ * @coversDefaultClass \SoftwareChasers10\Software-Chasers\init
  */
 class initTest extends PHPUnit\Framework\TestCase{
   protected $hello;
   
   public function setUp(): void {//this part of the code initiates the hello variable
-    $this->hello = new \Software-Chasers1\Software-Chasers\init();
+    $this->hello = new \SoftwareChasers10\Software-Chasers\init();
   }
   /**
    * @covers ::world
