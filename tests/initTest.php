@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 class initTest extends PHPUnit\Framework\TestCase{
   protected $hello;
   
-  public function setUp(){//this part of the code initiates the hello variable
+  public function setUp(): void {//this part of the code initiates the hello variable
     $this->hello = new \Software-Chasers1\Software-Chasers\init();
   }
   /**
