@@ -1,5 +1,5 @@
 <?php
-namespace SoftwareChasers10\Software-Chasers;
+namespace SoftwareChasers10\SoftwareChasers;
 class init{
   public function world(){
     return 'world';
