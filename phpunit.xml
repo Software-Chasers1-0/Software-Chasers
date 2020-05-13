@@ -8,7 +8,7 @@
     </logging>
     <filter>
         <whitelist>
-            <directory suffix=".php">./php/</directory>
+            
         </whitelist>
     </filter>
 </phpunit>
