@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    background-image: url("images/Search_001.png");
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  .content {
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .side-bar {
+    width: 190px;
+    /*background-color: rgba(50,50,50,0.9);*/
+    color: #DDD;
+    
+  }
+
+  .list-head {
+    padding: 5px;
+    background-color: rgba(50,50,50,0.9);
+  }
+
+  .side-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*height: 58px;*/
+    /*background-color: rgba(10,100,100,0.9);*/
+  }
+  .side-bar ul li {
+    background-color: rgba(100, 100, 100, 0.5);
+    border-bottom: 1px solid #1c1c1c;
+    border-top: 1px solid #343434;
+  }
+
+  .side-bar ul a {
+    line-height: 54px;
+    font-size: 18px;
+    padding-left: 12px;
+  }
+
+
+  .char-container {
+    border-left: 1px #CCC solid ;
+    width: 610px;
+    position: relative;
+  }
+
+  .box {
+    /*border: 1px #999 solid ;*/
+    height: 420PX;
+    overflow: auto;
+  }
+
+  .chat-head {
+    background-color: rgba(150,150,150,0.9);
+    padding: 2px;
+    text-align: center;
+    color: #252525;
+  }
+
+  .container {
+    position: relative;
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    margin: 10px 10px;
+    width: 400px;
+  }
+  .darker {
+    position: relative;
+    border-color: #ccc;
+    background-color: #ddd;
+    /*justify-items: right;*/
+    right: -166px;
+  }
+
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .time-right {
+    display: block;
+    /*border: 1px solid;*/
+    text-align: right;
+    color: #aaa;
+    width:100%;
+  }
+
+  .time-left {
+    display: block;
+    text-align: left;
+    color: #999;
+    width:100%;
+    /*border: 1px solid;*/
+  }
+
+  .form-container {
+    margin-top: 1px;
+    background-color: rgba(100,100,100,0.9);
+    /*background: rgba(0, 0, 0, 0.7);*/
+  }
+
+  input {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #eee;
+    padding: 5px;
+    margin-bottom: 30px;
+    width: 520px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+
+  button {
+    padding: 10px 5px;
+    margin-top: 20px;
+    border-radius: 5px; 
+    border: none;
+    background: #26a9e0; 
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+  }
+  button:hover {
+    background: #85d6de;
+  }
+
+  </style>
+  <script src="js/chats.js"></script>
+</head>
+<body onload="return(onload())">
+
+<h2>Chat Messages</h2>
+<div class="content">
+    <div class="side-bar">
+        <div class="list-head">
+            <center><h3>Chats</h3></center>
+        </div>
+        <ul id="chat-list">
+            <!--<li><a>Person 1</a></li>
+            <li><a>Person 2</a></li>-->
+        </ul>
+        
+    </div>
+    <div class="char-container" >
+        <div class="chat-head" id="chat-head">
+            <!--<h3>Person 1</h3>-->
+        </div>
+        <div class="box" id="box">
+            <!--<div class="container">
+                <a class="time-left">Avatar</a>
+                <a>Hello. How are you today?</a>
+            </div>
+        
+            <div class="container darker">  
+                <a class="time-right">Avatar</a>
+                <a>Hey! I'm fine. Thanks for asking!</a>
+            </div>
+        
+            <div class="container">
+                <a class="time-left">Avatar</a>
+                <a>Sweet! So, what do you wanna do today?</a>
+            </div>
+        
+            <div class="container darker">
+                <a class="time-right">Avatar</a>
+                <a>Nah, I dunno. Play soccer.. or learn more coding perhaps?</a>
+            </div>-->
+        </div>
+
+        <div class="form-container">
+            <form action="/chats.html" id="chat">
+                    <input type="text" id="chat-text" placeholder="Type a message">
+                    <button type="submit" >Send</button>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>
