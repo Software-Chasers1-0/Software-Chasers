@@ -1,7 +1,7 @@
 <?php
 namespace SoftwareChasers10\SoftwareChasers;
-class books {
-    public function download() {
+class chat {
+    public function send_chat() {
         $servername = "localhost";
         $username = "rovhol0";
         $password = "Differ123*cpanel";
@@ -11,18 +11,16 @@ class books {
         if ($link->connect_error) {
             die("connection failed: " . $link->connect_error);
         }
-        $book = $_POST['book'];
+        $buyer = $_POST['user'];
+        $seller = $_POST['seller'];
+        $chat = $_POST['chat'];
+        echo $chat;
         $result = mysqli_query($link,
-            "SELECT * FROM books WHERE book_name LIKE '%$book%'
-            OR book_author LIKE '%$book%'
-            OR subcategory_id IN (
-                SELECT subcategory_id FROM SubCategories WHERE subcategory_name LIKE '%$book%'
-                OR category_id IN (
-                    SELECT category_id FROM Categories WHERE category_name LIKE '%$book%'
-                )
-            ) ORDER BY book_id DESC;"
+            "UPDATE Chats SET chat = '$chat' 
+            WHERE (seller_id = '$seller' And buyer_id = '$buyer')
+            OR (seller_id = '$buyer' And buyer_id = '$seller')"
         );
-    
+        
         $link->close();
         #echo "connected successfully <br />";
         #echo json_encode($result);
@@ -34,5 +32,5 @@ class books {
         return json_encode($arr);
     }
 }
-echo (new books)->download();
+echo (new chat)->send_chat();
 ?>
