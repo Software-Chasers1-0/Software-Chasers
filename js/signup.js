@@ -23,11 +23,8 @@ function doRegister() {
 }
 //var res;
 function login() {
-    //alert("login");
-    
     var res,resString;
     var Uname = document.forms["login-form"]["username"].value;
-    //alert(Uname);
     var pass = document.forms["login-form"]["password"].value;
     var formData = new FormData();
     formData.set('Uname', Uname);
@@ -44,7 +41,10 @@ function login() {
     };
     httpReq.send(formData);
     //alert(pass);
-    
+    document.cookie = "user_id="+res[0].user_id;
+    document.cookie = "user_name="+res[0].user_name;
+    //alert(document.cookie);
+    //alert(decodeURIComponent(document.cookie));
     if(resString === "[]" || pass === "" || res[0].user_password != pass ) {
         alert("invalid details!!!");
         //d = document.getElementById("demo");

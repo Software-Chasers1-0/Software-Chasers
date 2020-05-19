@@ -1,3 +1,11 @@
+const onload = () => {
+    var v;
+    if( getCookie("user_name") === ""){
+        self.location = "/signup.html";
+        return false;
+    }
+    
+}
 const upload=()=> {
     
     //alert("something1");
@@ -8,6 +16,7 @@ const upload=()=> {
     var isbn = document.forms["book-form"]["isbn"].value;
     var faculty = document.forms["book-form"]["faculty"].value;
     var school = document.forms["book-form"]["school"].value;
+    var user_id = getCookie("user_id");
     //alert("something");
     //alert(document.cookie);
     //alert(document.cookie[0]);
@@ -22,6 +31,7 @@ const upload=()=> {
     formData.set('faculty', faculty);
     formData.set('school', school);
     formData.set('file', file.files[0]);
+    formData.set('user', user_id);
     var httpReq = new XMLHttpRequest();
     httpReq.open("POST", "php/upload.php", false);
     //httpReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -39,4 +49,24 @@ const upload=()=> {
     httpReq.send(formData);
     
     //return false;
+};
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);//.replace("=",":");
+  var ca = decodedCookie.split(';');
+  //alert(JSON.stringify(ca));
+  //ca = ca.replace("=",":");
+  //alert(JSON.parse(JSON.stringify(ca)).user_id);
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+      //alert(c);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
