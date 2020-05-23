@@ -1,20 +1,4 @@
-#sudo: false
-
-#language: node_js
-
-#node_js:
-#  -node
-
-#install:
-#  -npm ci
-
-#script:
-#  -npm run lint
-#  -npm run test: coveralls
-
-#notificatiom:
-#  email: false */ 
-language: php
+ language: php
 php:
   - 7.2
 services:
