@@ -9,27 +9,26 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
   <link href="css/index.css" rel="stylesheet" />
   <link href="css/dropdown.css" rel="stylesheet" type="text/css" />
-  <script src="js/index.js"></script>
   <title>Home</title>
 </head>
 
-<body onload="return(onload())">
+<body>
 
   <div class="s01">
 
     <header class="header">
       <div class="left-side">
-        <a class="home-icon" href="/">
+        <a class="home-icon" href="#">
           <img src="images/home.svg" alt="home" width="32" height="32"/>
         </a>
       </div>
-      <form name="search" onsubmit="return(loadbooks())">
+      <form>
         <div class="inner-form">
           <div class="input-field first-wrap">
-            <input id="search" name="search" type="text" placeholder="Search" />
+            <input id="search" type="text" placeholder="Search" />
           </div>
           <div class="input-field third-wrap">
-            <button class="btn-search" type="submit">Search</button>
+            <button class="btn-search" type="button">Search</button>
           </div>
         </div>
       </form>
@@ -43,43 +42,228 @@
       <nav>
         <ul class="menu">
           <!--<li><a href="#">Home</a></li>-->
-          <li><a id="icon" href="#s1"><img src="images/open-menu.svg" alt="menu" width="30" height="30"/></a>
+          <li><a id="icon" href="#s1"><img src="images/open-menu.svg" alt="home" width="30" height="30"/></a>
             <ul class="submenu">
               <li>
-                <ul class="subcategory" id="1"></ul>
-                <a href="#" onclick="loadbooks('Science')">Science</a>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Science</a>
               </li>
               <li>
-                <ul class="subcategory" id="3"></ul>
-                <a href="#" onclick="loadbooks('Law')">Law</a>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Law</a>
               </li>
               <li>
-                <ul class="subcategory" id="2"></ul>
-                <a href="#" onclick="loadbooks('health')">health</a>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">health</a>
               </li>
               <li>
-                <ul class="subcategory" id="4"></ul>
-                <a href="#" onclick="loadbooks('Commerce')">Commerce</a>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Commerce</a>
               </li>
               <li>
-                <ul class="subcategory" id="5"></ul>
-                <a href="#" onclick="loadbooks('Engineering')">Engineering</a>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Engineering</a>
               </li>
               <li>
-                <ul class="subcategory" id="6"></ul>
-                <a href="#" onclick="loadbooks('Humanities')">Humanities</a>
+                <ul class="subcategory">
+                  <li><a href="#">Submenu a</a></li>
+                  <li><a href="#">Submenu b</a></li>
+                  <li><a href="#">Submenu c</a></li>
+                  <li><a href="#">Submenu d</a></li>
+                  <li><a href="#">Submenu e</a></li>
+                </ul>
+                <a href="#">Humanities</a>
               </li>
               
             </ul>
           </li>
+          <!--<li class="active"><a href="#s2">Menu 2</a>
+          <ul class="submenu">
+            <li><a href="#">Submenu a</a></li>
+            <li><a href="#">Submenu b</a></li>
+            <li><a href="#">Submenu c</a></li>
+            <li><a href="#">Submenu d</a></li>
+            <li><a href="#">Submenu e</a></li>
+            <li><a href="#">Submenu f</a></li>
+            <li><a href="#">Submenu g</a></li>
+            <li><a href="#">Submenu h</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Menu 3</a>
+          <ul class="submenu">
+            <li><a href="#">Submenu a</a></li>
+            <li><a href="#">Submenu b</a></li>
+            <li><a href="#">Submenu c</a></li>
+            <li><a href="#">Submenu d</a></li>
+            <li><a href="#">Submenu e</a></li>
+            <li><a href="#">Submenu f</a></li>
+            <li><a href="#">Submenu g</a></li>
+            <li><a href="#">Submenu h</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Menu 4</a></li>
+        <li><a href="http://www.script-tutorials.com/whirling-dropdown-menu/">Back to tutorial</a></li>-->
         </ul>
         <button type="button" onclick="window.location.href='sell.html'" >
           sell
         </button>
       </nav>
       <div class="search-cover">
-        <h2 id="heading"><u>Recently Uploaded</u></h2>
-        <div class="books-cover" id="books-cover"></div>
+        <h2><u>Recently Uploaded</u></h2>
+        <div class="books-cover">
+          <div class="books">
+              <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+              <a>Thomas Calculus 13th edition</a> <br />
+              <a>R200</a>
+            
+          </div>
+        </a>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+          <div class="books">
+            <img src="images/Thomas.jpg" alt="IMG" width="120" height="150" />
+            <a>Thomas Calculus 13th edition</a> <br />
+            <a>R200</a>
+          </div>
+        </div>
       </div>
     </div>
 
