@@ -4,9 +4,6 @@ const onload = () => {
     //alert(document.cookie);
     //var c = decodeURIComponent(document.cookie).split(';');
     var user_name = getCookie("user_name");
-    if( user_name === ""){
-        //alert("Not loged in");
-    }
     
     loadbooks();
     var res;
@@ -65,7 +62,7 @@ const onload = () => {
         let div = document.createElement('div');
         div.className = "books";
         div.onclick = function() {getBook(v)};
-        div.innerHTML = '<img src="'+v.book_image+'" alt="IMG" width="120" height="150" />'
+        div.innerHTML = '<img src="'+v.book_image+'" alt="IMG" width="120" height="150" /> <br />'
                       + '<a>'+v.book_name+'</a> <br />' + '<a>R'+v.book_price+'</a>';
         books.append(div);
     });
@@ -84,7 +81,40 @@ const getBook = (v) => {
     //alert(v.subcategory_id);
     self.location = "/book.html";
     //return false;
-}
+};
+
+const Mybooks = () => {
+    var resarr;
+    var id = getCookie("user_id");
+    if( id === ""){
+        self.location = "/signup.html";
+        return false;
+    }
+    document.getElementById('heading').innerHTML = "<u>My Books</u>";
+    var httpReq = new XMLHttpRequest();
+    httpReq.open("POST", "php/books.php", false);
+    var formData = new FormData();
+    formData.set('id', id);
+    //httpReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    httpReq.onload = function() {
+        resarr = JSON.parse(this.responseText);
+        //image = document.getElementById('img');
+    };
+    httpReq.send(formData);
+    
+    let books = document.getElementById('books-cover');
+    books.innerHTML = "";
+    resarr.forEach( v => {
+        let div = document.createElement('div');
+        div.className = "books";
+        div.onclick = function() {alert("You can't select your own book")};
+        div.innerHTML = '<img src="'+v.book_image+'" alt="IMG" width="120" height="150" /> <br />'
+                      + '<a>'+v.book_name+'</a> <br />' + '<a>R'+v.book_price+'</a>';
+        books.append(div);
+    });
+    //alert("something");
+    return false;
+};
 
 function getCookie(cname) {
   var name = cname + "=";
