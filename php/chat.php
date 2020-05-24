@@ -1,5 +1,5 @@
 <?php
-namespace SoftwareChasers10\SoftwareChasers;
+/*namespace SoftwareChasers10\SoftwareChasers;
 class chat {
     public function send_chat() {
         $servername = "localhost";
@@ -32,5 +32,5 @@ class chat {
         return json_encode($arr);
     }
 }
-echo (new chat)->send_chat();
+echo (new chat)->send_chat();*/
 ?>
