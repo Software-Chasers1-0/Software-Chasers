@@ -1,9 +1,8 @@
 <?php
-use PHPUnit\Framework\TestCase;
 /**
  * @coversDefaultClass \SoftwareChasers10\SoftwareChasers\chats
  */
-class chatsTests extends TestCase
+class chatsTest extends PHPUnit\Framework\TestCase
 {
     protected $DataHolder;
   
