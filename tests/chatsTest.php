@@ -9,8 +9,8 @@ class EmptyTest extends TestCase
     protected $DataHolder;
   
     public function setUp(): void {
-    
-    $this->DataHolder = new \SoftwareChasers10\SoftwareChasers\chats();
+   // $this->DataHolder = new \SoftwareChasers10\SoftwareChasers\chats();
+    $this->DataHolder ="OKAY";
     }
    /**
    * @covers ::chat
