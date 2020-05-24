@@ -1,5 +1,5 @@
 <?php
-namespace SoftwareChasers10\SoftwareChasers;
+/*namespace SoftwareChasers10\SoftwareChasers;
 class upload {
     public function sell() {
         
