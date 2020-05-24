@@ -1,5 +1,5 @@
 <?php
-/*namespace SoftwareChasers10\SoftwareChasers;
+namespace SoftwareChasers10\SoftwareChasers;
 class book {
     public function download() {
         $servername = "localhost";
@@ -28,5 +28,5 @@ class book {
         return json_encode($arr);
     }
 }
-echo (new book)->download();*/
+echo (new book)->download();
 ?>
