@@ -5,5 +5,4 @@ class init{
     return 'world';
   }
 }
-echo (new init())->world();
 ?>
