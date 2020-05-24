@@ -1,6 +1,6 @@
  language: php
 php:
-  - 7.2
+  - php
 services:
   - mysql
 before_script:
