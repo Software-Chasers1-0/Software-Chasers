@@ -19,3 +19,4 @@ class EmptyTest extends TestCase
         $this->assertNotEmpty($this->DataHolder);
     }
 }
+?>
