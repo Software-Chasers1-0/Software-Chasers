@@ -1,5 +1,5 @@
 <?php
-/*namespace SoftwareChasers10\SoftwareChasers;
+namespace SoftwareChasers10\SoftwareChasers;
 class signin {
     public function sign() {
         $servername = "localhost";
@@ -25,5 +25,5 @@ class signin {
         echo json_encode($arr);
     }
 }
-echo (new signin())->sign(); */
+echo (new signin())->sign(); 
 ?>
