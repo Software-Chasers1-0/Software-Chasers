@@ -60,3 +60,4 @@ class upload {
 }
 echo (new upload())->sell();
 ?>
+
