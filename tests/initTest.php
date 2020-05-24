@@ -3,7 +3,7 @@
  * @coversDefaultClass \SoftwareChasers10\SoftwareChasers\init
  */
 class initTest extends PHPUnit\Framework\TestCase{
-  //protected $hello;
+  protected $hello;
   
   public function setUp(): void {//this part of the code initiates the hello variable
     $this->$hello = new \SoftwareChasers10\SoftwareChasers\init();
