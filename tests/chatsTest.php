@@ -5,6 +5,6 @@ class EmptyTest extends TestCase
 {
     public function testFailure()
     {
-        $this->assertNotEmpty(['foo']);
+        $this->assertNotEmpty([json_encode($arr)]);
     }
 }
