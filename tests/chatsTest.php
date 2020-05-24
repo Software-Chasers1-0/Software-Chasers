@@ -3,7 +3,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @coversDefaultClass \SoftwareChasers10\SoftwareChasers\chats
  */
-class ChatsTests extends TestCase
+class chatsTests extends TestCase
 {
     protected $DataHolder;
   
