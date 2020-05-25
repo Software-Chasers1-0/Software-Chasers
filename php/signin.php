@@ -27,5 +27,5 @@ class signin {
         echo json_encode($arr);
     }
 }
-echo (new signin())->sign(); 
+#echo (new signin())->sign(); 
 ?>
