@@ -1,7 +1,7 @@
 <?php
 namespace SoftwareChasers10\SoftwareChasers;
 class signin {
-    public function sign($user = NULL) {
+    public function sign($user) {
         $servername = "localhost";
         $username = "user";
         $password = "password";
