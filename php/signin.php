@@ -3,8 +3,8 @@ namespace SoftwareChasers10\SoftwareChasers;
 class signin {
     public function sign() {
         $servername = "localhost";
-        $username = "rovhol0";
-        $password = "Differ123*cpanel";
+        $username = "user";
+        $password = "password";
     
         $link = new \mysqli($servername,$username,$password,"rovhol0_database1");
 
