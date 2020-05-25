@@ -13,6 +13,9 @@ class signin {
         }
         if(is_null($user)) {
             $user = $_POST['Uname'];
+            if(is_null($user)) {
+                return "invalid input";
+            }
         }
         //echo "now". $user. "thats ric";
         $result = mysqli_query($link,"SELECT * FROM users where user_name='$user'");
