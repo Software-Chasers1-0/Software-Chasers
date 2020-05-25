@@ -12,12 +12,7 @@ class signin {
             die("connection failed: " . $link->connect_error);
         }
         if(is_null($user)) {
-            try {
-                $user = $_POST['Uname'];
-            } catch (Exception $e) {
-                return 'Caught exception: '.  $e->getMessage(). "\n";
-            }
-
+            $user = $_POST['Uname'];
         }
         //echo "now". $user. "thats ric";
         $result = mysqli_query($link,"SELECT * FROM users where user_name='$user'");
@@ -32,5 +27,5 @@ class signin {
         echo json_encode($arr);
     }
 }
-echo (new signin())->sign(); 
+#echo (new signin())->sign(); 
 ?>
