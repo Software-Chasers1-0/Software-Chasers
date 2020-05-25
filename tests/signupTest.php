@@ -12,9 +12,9 @@ class signupTest extends PHPUnit\Framework\TestCase{
 	mysqli_query($link,"INSERT INTO users (user_id,user_name,user_password,user_role,user_email) values('46','Pfariso','Pfariso.@1','null','mpfumbapfariso@gmail.com')");
   }
   /**
-   * @covers ::signin
+   * @covers ::sign
    */
-  public function testinit(){
+  public function testsignup(){
     #$this->assertEquals($this->result->signup("","email","pass"),'invalid input');
     #$this->assertEquals($this->result->signup("user","","pass"),'invalid input');
     #$this->assertEquals($this->result->signup("user","email",""),'invalid input');
