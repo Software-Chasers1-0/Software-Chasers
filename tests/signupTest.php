@@ -19,7 +19,6 @@ class signupTest extends PHPUnit\Framework\TestCase{
     $this->assertEquals($this->result->signup("user","","pass"),'invalid input');
     $this->assertEquals($this->result->signup("user","email",""),'invalid input');
     $this->assertEquals($this->result->signup("","",""),'invalid input');
-    $this->assertEquals($this->result->signup("Pfariso","email","Pfariso.@1"),'invalid email');
     $this->assertTrue($this->result->sign("Pfariso","mpfumbapfariso@gmail.com","Pfariso.@1"));
   }
 }
