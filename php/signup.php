@@ -14,7 +14,7 @@ class signup {
         #$user = $_POST['Uname'];
         #$mail = $_POST['Umail'];
         #$pass = $_POST['passwd'];
-        if($user = "" || $mail = ""  || $pass = "") {
+        if($user == "" || $mail == ""  || $pass == "") {
             return 'invalid input';
         }
     
