@@ -1,7 +1,7 @@
 <?php
 namespace SoftwareChasers10\SoftwareChasers;
 class books {
-    public function download() {
+    public function download($book,$id) {
         $servername = "localhost";
         $username = "rovhol0";
         $password = "Differ123*cpanel";
@@ -11,8 +11,8 @@ class books {
         if ($link->connect_error) {
             die("connection failed: " . $link->connect_error);
         }
-        $book = $_POST['book'];
-        $id = $_POST['id'];
+        #$book = $_POST['book'];
+        #$id = $_POST['id'];
         if(is_null($id)) {
             $result = mysqli_query($link,
                 "SELECT * FROM books WHERE book_name LIKE '%$book%'
@@ -41,5 +41,5 @@ class books {
         return json_encode($arr);
     }
 }
-echo (new books)->download();
+#echo (new books)->download();
 ?>
