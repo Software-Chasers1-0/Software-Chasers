@@ -3,10 +3,10 @@ namespace SoftwareChasers10\SoftwareChasers;
 class book {
     public function download($booksub,$bookid) {
         $servername = "localhost";
-        $username = "rovhol0";
-        $password = "Differ123*cpanel";
+        $username = "user";
+        $password = "password";
         //echo "something";
-        $link = new \mysqli($servername,$username,$password,"rovhol0_database1");
+        $link = new \mysqli($servername,$username,$password,"database1");
 
         if ($link->connect_error) {
             die("connection failed: " . $link->connect_error);
