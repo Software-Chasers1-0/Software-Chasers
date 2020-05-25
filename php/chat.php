@@ -1,19 +1,19 @@
 <?php
 namespace SoftwareChasers10\SoftwareChasers;
 class chat {
-    public function send_chat() {
+    public function send_chat($buyer,$seller,$chat) {
         $servername = "localhost";
-        $username = "rovhol0";
-        $password = "Differ123*cpanel";
-    
-        $link = new \mysqli($servername,$username,$password,"rovhol0_database1");
+        $username = "user";
+        $password = "password";
+        //echo "something";
+        $link = new \mysqli($servername,$username,$password,"database1");
 
         if ($link->connect_error) {
             die("connection failed: " . $link->connect_error);
         }
-        $buyer = $_POST['user'];
-        $seller = $_POST['seller'];
-        $chat = $_POST['chat'];
+        #$buyer = $_POST['user'];
+        #$seller = $_POST['seller'];
+        #$chat = $_POST['chat'];
         echo $chat;
         $result = mysqli_query($link,
             "UPDATE Chats SET chat = '$chat' 
