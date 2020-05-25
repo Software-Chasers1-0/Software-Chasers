@@ -1,7 +1,7 @@
 <?php
 namespace SoftwareChasers10\SoftwareChasers;
 class signup {
-    public function sign() {
+    public function sign($user = NULL,$mail = NULL,$pass = NULL) {
         $servername = "localhost";
         $username = "rovhol0";
         $password = "Differ123*cpanel";
@@ -11,9 +11,9 @@ class signup {
         if ($link->connect_error) {
             die("connection failed: " . $link->connect_error);
         }
-        $user = $_POST['Uname'];
-        $mail = $_POST['Umail'];
-        $pass = $_POST['passwd'];
+        #$user = $_POST['Uname'];
+        #$mail = $_POST['Umail'];
+        #$pass = $_POST['passwd'];
     
         #echo "now". $user. "thats ric";
         $result = mysqli_query( $link,"INSERT INTO users(user_name, user_email, user_password) VALUES('$user', '$mail', '$pass')" );
@@ -28,5 +28,5 @@ class signup {
         echo json_encode($arr);
     }
 }
-echo (new signup())->sign();
+#echo (new signup())->sign();
 ?>
