@@ -32,5 +32,5 @@ class chat {
         return json_encode($arr);
     }
 }
-echo (new chat)->send_chat();
+//echo (new chat)->send_chat();
 ?>
