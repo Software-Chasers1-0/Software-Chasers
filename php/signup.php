@@ -3,10 +3,10 @@ namespace SoftwareChasers10\SoftwareChasers;
 class signup {
     public function sign($user = NULL,$mail = NULL,$pass = NULL) {
         $servername = "localhost";
-        $username = "rovhol0";
-        $password = "Differ123*cpanel";
+        $username = "user";
+        $password = "password";
         //echo "connected successfully <br />";
-        $link = new \mysqli($servername,$username,$password,"rovhol0_database1");
+        $link = new \mysqli($servername,$username,$password,"database1");
 
         if ($link->connect_error) {
             die("connection failed: " . $link->connect_error);
