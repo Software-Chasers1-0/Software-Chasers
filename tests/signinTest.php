@@ -16,8 +16,8 @@ class signinTest extends PHPUnit\Framework\TestCase{
 	 * @covers ::sign
 	 */
 	public function testsingin(){//this part of the code checks if the value returned by the world() method is equal to word
-		$password = "Pfariso.@1";
-		$this->assertSame( json_decode( $this->result->sign("Pfariso"),true )[0]["user_password"], $password );
+		#$password = "Pfariso.@1";
+		$this->assertSame( json_decode( $this->result->sign("Pfariso"),true )[0]["user_password"], "Pfariso.@1" );
 		#$this->assertTrue( count( json_decode( $this->result->sign("") ) ) == 0 );
 	}
 }
