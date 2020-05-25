@@ -15,10 +15,10 @@ class signupTest extends PHPUnit\Framework\TestCase{
    * @covers ::sign
    */
   public function testsignup(){
-    $this->assertEquals($this->result->signup("","email","pass"),'invalid input');
-    $this->assertEquals($this->result->signup("user","","pass"),'invalid input');
-    $this->assertEquals($this->result->signup("user","email",""),'invalid input');
-    $this->assertEquals($this->result->signup("","",""),'invalid input');
+    $this->assertEquals($this->result->sign("","email","pass"),'invalid input');
+    $this->assertEquals($this->result->sign("user","","pass"),'invalid input');
+    $this->assertEquals($this->result->sign("user","email",""),'invalid input');
+    $this->assertEquals($this->result->sign("","",""),'invalid input');
     $this->assertTrue($this->result->sign("Pfariso","mpfumbapfariso@gmail.com","Pfariso.@1"));
   }
 }
