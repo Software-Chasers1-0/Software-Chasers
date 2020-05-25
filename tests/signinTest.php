@@ -13,7 +13,7 @@ class signinTest extends PHPUnit\Framework\TestCase{
 		mysqli_query($link,"INSERT INTO users (user_id,user_name,user_password,user_role,user_email) values('46','Pfariso','Pfariso.@1','null','mpfumbapfariso@gmail.com')");
 	}
 	/**
-	 * @covers ::sing
+	 * @covers ::sign
 	 */
 	public function testsingin(){//this part of the code checks if the value returned by the world() method is equal to word
 		$password = "Pfariso.@1";
