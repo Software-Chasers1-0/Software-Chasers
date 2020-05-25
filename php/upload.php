@@ -1,22 +1,21 @@
 <?php
 namespace SoftwareChasers10\SoftwareChasers;
 class upload {
-    public function sell() {
+    public function sell($bookname,$author,$price,$isbn,$faculty,$school,$user,$data) {
         
-        $bookname = $_POST['bookname'];
-        $author = $_POST['author'];
-        $price = $_POST['price'];
-        $isbn = $_POST['isbn'];
-        $faculty = $_POST['faculty'];
-        $school = $_POST['school'];
-        $user = $_POST['user'];
-        $fileName = $_FILES['file']['name'];
-        $fileType = $_FILES['file']['type'];
-        $fileContent = file_get_contents($_FILES['file']['tmp_name']);
-        $data = base64_encode($fileContent);
-        $dataUrl = 'data:' . $fileType . ';base64,' . base64_encode($fileContent);
+        #$bookname = $_POST['bookname'];
+        #$author = $_POST['author'];
+        #$price = $_POST['price'];
+        #$isbn = $_POST['isbn'];
+        #$faculty = $_POST['faculty'];
+        #$school = $_POST['school'];
+        #$user = $_POST['user'];
+        #$fileName = $_FILES['file']['name'];
+        #$fileType = $_FILES['file']['type'];
+        #$fileContent = file_get_contents($_FILES['file']['tmp_name']);
+        #$data = base64_encode($fileContent);
         
-        $link = new \mysqli("localhost","rovhol0","Differ123*cpanel","rovhol0_database1");
+        $link = new \mysqli("localhost","user","password","database1");
         
         if ($link->connect_error) {
             die("connection failed: " . $link->connect_error);
@@ -58,6 +57,6 @@ class upload {
         
     }
 }
-echo (new upload())->sell();
+//echo (new upload())->sell();
 ?>
 
