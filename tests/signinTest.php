@@ -20,7 +20,7 @@ class signinTest extends PHPUnit\Framework\TestCase{
 		$res = json_decode( $this->result->sign("pfariso"),true );
 		echo "this" . $res[0]['user_password'];
 		echo "that" . json_decode( $this->result->sign("pfariso"),true )[0];
-		echo "now" . json_decode( $this->result->sign("pfariso"))[0]->user_password;
+		echo "now" . json_decode( $this->result->sign("pfariso"),false)[0]->user_password;
 		$this->assertSame( json_decode( $this->result->sign("pfariso"),true )[0]['user_password'], $password );
 		#$this->assertTrue( count( json_decode( $this->result->sign("") ) ) == 0 );
 	}
