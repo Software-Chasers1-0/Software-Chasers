@@ -45,5 +45,5 @@ class chats {
         return json_encode($arr);
     }
 }
-echo (new chats)->chat();
+//echo (new chats)->chat();
 ?>
