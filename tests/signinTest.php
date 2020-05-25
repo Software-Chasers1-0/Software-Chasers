@@ -3,7 +3,7 @@
 /**
  * @coversDefaultClass SoftwareChasers10\SoftwareChasers\signin
  */
-class signinTest extends PHPUnit_Framework_TestCase{
+class signinTest extends PHPUnit\Framework\TestCase{
 	protected $result;
 
 	public function setUp(){//this part of the code initiates the hello variable
