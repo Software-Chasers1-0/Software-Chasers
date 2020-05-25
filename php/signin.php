@@ -6,7 +6,7 @@ class signin {
         $username = "user";
         $password = "password";
     
-        $link = new \mysqli($servername,$username,$password,"rovhol0_database1");
+        $link = new \mysqli($servername,$username,$password,"database1");
 
         if ($link->connect_error) {
             die("connection failed: " . $link->connect_error);
