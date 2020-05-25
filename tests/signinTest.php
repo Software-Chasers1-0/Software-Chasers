@@ -10,14 +10,14 @@ class signinTest extends PHPUnit\Framework\TestCase{
 		$this->result = new \SoftwareChasers10\SoftwareChasers\signin();
 		$link = mysqli_connect("localhost","user","password","database1");
 		mysqli_query($link,"CREATE TABLE users (user_id int NOT NULL AUTO_INCREMENT,user_name varchar(255),user_password varchar(255),user_email varchar(255),user_role varchar(255))");
-		mysqli_query($link,"INSERT INTO users (user_name,user_password,user_role,user_email) values('pfariso','Pfariso.@1','null','mpfumbapfariso@gmail.com')");
+		mysqli_query($link,"INSERT INTO users (user_name,user_password,user_role,user_email) values('Pfariso','Pfariso.@1','null','mpfumbapfariso@gmail.com')");
 	}
 	/**
 	 * @covers ::sign
 	 */
 	public function testsingin(){//this part of the code checks if the value returned by the world() method is equal to word
 		$password = "Pfariso.@1";
-		$this->assertSame( json_decode( $this->result->sign("pfariso"),true )[0]['user_password'], $password );
+		$this->assertSame( json_decode( $this->result->sign("Pfariso"),true )[0]['user_password'], $password );
 		$this->assertTrue( count( json_decode( $this->result->sign("") ) ) == 0 );
 	}
 }
