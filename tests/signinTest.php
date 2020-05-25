@@ -6,7 +6,7 @@
 class signinTest extends PHPUnit_Framework_TestCase{
 	protected $result;
 
-	public function setUp(){//this part of the code initiates the hello variable
+	public function setUp() : void {//this part of the code initiates the hello variable
 		$this->result = new \SoftwareChasers10\SoftwareChasers\signin();
 		$link = mysqli_connect("localhost","username","password","database1");
 		mysqli_query($link,"CREATE TABLE users (user_id int NOT NULL,user_name varchar(255),user_password varchar(255),user_email varchar(255),user_role varchar(255))");
