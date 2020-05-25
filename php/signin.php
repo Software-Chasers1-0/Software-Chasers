@@ -15,7 +15,7 @@ class signin {
             try {
                 $user = $_POST['Uname'];
             } catch (Exception $e) {
-                return 'Caught exception: ',  $e->getMessage(), "\n";
+                return 'Caught exception: '.  $e->getMessage(). "\n";
             }
 
         }
