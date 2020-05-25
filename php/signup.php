@@ -14,6 +14,9 @@ class signup {
         #$user = $_POST['Uname'];
         #$mail = $_POST['Umail'];
         #$pass = $_POST['passwd'];
+        if($user = "" || $mail = ""  || $pass = "") {
+            return 'invalid input';
+        }
     
         #echo "now". $user. "thats ric";
         $result = mysqli_query( $link,"INSERT INTO users(user_name, user_email, user_password) VALUES('$user', '$mail', '$pass')" );
