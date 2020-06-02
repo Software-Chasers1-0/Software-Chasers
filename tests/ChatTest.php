@@ -3,7 +3,7 @@
 namespace PHPUnit\Framework;
 
 /**
- * @coversDefaultClass \SoftwareChasers10\SoftwareChasers\chats
+ * @coversDefaultClass \SoftwareChasers10\SoftwareChasers\chat
  */
 class ChatTest extends TestCase{
     protected $DataHolder;
