@@ -17,7 +17,7 @@ class menuTest extends TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertNotEmpty($this->DataHolder->download());
+        $this->assertNotEmpty($this->DataHolder);
     }
 }
 ?>
