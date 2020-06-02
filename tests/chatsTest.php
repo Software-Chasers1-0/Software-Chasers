@@ -17,7 +17,7 @@ class chatsTest extends TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertEmpty($this->DataHolder, "It is empty");
+        $this->assertNotEmpty($this->DataHolder, "It is empty");
     }
 }
 ?>
