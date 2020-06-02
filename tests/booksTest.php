@@ -5,7 +5,7 @@ namespace PHPUnit\Framework;
 /**
  * @coversDefaultClass \SoftwareChasers10\SoftwareChasers\books
  */
-class bookstest extends TestCase{
+class booksTest extends TestCase{
     protected $DataHolder;
   
     public function setUp(): void {
