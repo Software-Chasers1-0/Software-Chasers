@@ -1,15 +1,17 @@
 <?php
 
-namespace PHPUnit\Framework;
-
 /**
  * @coversDefaultClass \SoftwareChasers10\SoftwareChasers\signin
  */
-class signinTest extends TestCase{
+class signinTest extends PHPUnit\Framework\TestCase
+{
     protected $DataHolder;
   
-    public function setUp(): void {
+    public function setUp(): void 
+    {
     $this->DataHolder = new \SoftwareChasers10\SoftwareChasers\signin();
+    $link = mysqli_connect("localhost","user","password","database1");
+    mysqli_query($link,"CREATE TABLE users (user_id int,user_name varchar(255),user_password varchar(255),user_email varchar(255),,user_role varchar(255) NULL)");
    
     }
    /**
