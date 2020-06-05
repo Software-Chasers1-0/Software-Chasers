@@ -19,5 +19,13 @@ class signinTest extends TestCase{
     {
         $this->assertNotEmpty($this->DataHolder, "It is empty");
     }
+    
+    public function login()
+    {
+        $user = User::first();
+        $this->be($user);
+        
+    }
+
 }
 ?>
