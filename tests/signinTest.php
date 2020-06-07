@@ -11,7 +11,7 @@ class signinTest extends TestCase{
     public function setUp(): void {
     $this->DataHolder = new \SoftwareChasers10\SoftwareChasers\signin();
     $link = mysqli_connect("localhost","user","password","database1");
-        mysqli_query($link,"CREATE TABLE users (user_id int,user_name varchar(255),user_password varchar(255),user_email varchar(255),,user_role varchar(255) NULL)");
+    mysqli_query($link,"CREATE TABLE users (user_id int,user_name varchar(255),user_password varchar(255),user_email varchar(255),user_role varchar(255) NULL)");
     mysqli_query($link,"INSERT INTO users (user_id,user_name,user_password,user_role,user_email) values('46','Pfariso','Pfariso.@1','null','mpfumbapfariso@gmail.com')");
     }
    /**
