@@ -19,7 +19,7 @@ class signinTest extends TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertNotEmpty($this->DataHolder->sign('Pfariso'));
+        $this->assertNotEmpty(\json_decode($this->DataHolder->sign('Pfariso')));
     }
     
     public function login()
