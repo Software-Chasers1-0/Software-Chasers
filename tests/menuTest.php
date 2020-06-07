@@ -10,6 +10,8 @@ class menuTest extends TestCase{
   
     public function setUp(): void {
     $this->DataHolder = new \SoftwareChasers10\SoftwareChasers\menu();
+    mysqli_query($link,"CREATE TABLE SubCategories (subcategory_id int,subcategory_name varchar(255),category_id int)");
+    mysqli_query($link,"INSERT INTO SubCategories (subcategory_id,subcategory_name,category_id) values('46','BSC','1')");
    
     }
    /**
