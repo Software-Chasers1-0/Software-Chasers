@@ -17,7 +17,7 @@ class menuTest extends TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertNotEmpty(json_dencode($this->DataHolder->download()));
+        $this->assertNotEmpty(\json_dencode($this->DataHolder->download()));
     }
 }
 ?>
