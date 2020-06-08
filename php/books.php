@@ -1,7 +1,7 @@
 <?php
 namespace SoftwareChasers10\SoftwareChasers;
 class books {
-    public function download($id = NULL,$book = NULL) {
+    public function download($book = NULL,$id = NULL) {
         $servername = "localhost";
         $username = "user";
         $password = "password";
