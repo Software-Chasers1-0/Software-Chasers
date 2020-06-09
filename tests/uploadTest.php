@@ -26,7 +26,7 @@ class uploadTest extends TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertNotEmpty($this->DataHolder->sell('bookname','author','55.5','123456','Science','14','img'));
+        $this->assertNotEmpty($this->DataHolder->sell('bookname','author','55.5','123456','Science','BSC','14','img'));
     }
 
 }
