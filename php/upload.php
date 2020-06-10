@@ -50,10 +50,12 @@ class upload {
         if(is_bool($result)) {
             return $result;
         }
+        if($result){
         $arr = array();
-        while ($row = mysqli_fetch_assoc($result)) {
+        while ($row = $result->fetch_assoc()) {
             #echo json_encode($result);
             array_push($arr, $row);
+        }
         }
         
         return json_encode($arr);
