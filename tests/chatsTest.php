@@ -22,7 +22,7 @@ class chatsTest extends TestCase{
     public function test_if_Empty()
     {
         $this->assertTrue($this->DataHolder->chat('46','61'));
-        #$this->assertNotEmpty($this->DataHolder->chat('46'));
+        $this->assertNotEmpty($this->DataHolder->chat('46'));
     }
 }
 ?>
