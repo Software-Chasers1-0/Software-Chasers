@@ -10,7 +10,7 @@ class ChatTest extends TestCase{
   
     public function setUp(): void {
     $this->DataHolder = new \SoftwareChasers10\SoftwareChasers\chat();
-     $link = mysqli_connect("localhost","user","password","database1");
+    $link = mysqli_connect("localhost","user","password","database1");
     mysqli_query($link,"CREATE TABLE Chats (seller_id int,chat varchar(255),buyer_id int)");
     mysqli_query($link,"INSERT INTO Chats (seller_id,chat,buyer_id) VALUES('46','null','61')");
    
@@ -20,11 +20,10 @@ class ChatTest extends TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertNotEmpty($this->DataHolder, "It is empty");
-    }
-    public function test_if_works()
-    {
         $this->assertTrue($this->DataHolder->chat('61','46','chat'));
+        $this->assertNotEmpty($this->DataHolder, "It is empty");
+        
     }
+    
 }
 ?>
