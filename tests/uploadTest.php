@@ -22,14 +22,7 @@ class uploadTest extends TestCase{
     {
         $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2','data:;base64,'));
         //$this->assertNotEmpty($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2','data:;base64,'));
-        $this->assertFalse($this->DataHolder->sell('','author','55.5','123456','Science','BSC','14','img'),'invalid input');
-        $this->assertFalse($this->DataHolder->sell('bookname','','55.5','123456','Science','BSC','14','img'),'invalid input');
-        $this->assertFalse($this->DataHolder->sell('bookname','author','','123456','Science','BSC','14','img'),'invalid input');
-        $this->assertFalse($this->DataHolder->sell('bookname','author','55.5','','Science','BSC','14','img'),'invalid input');
-        $this->assertFalse($this->DataHolder->sell('bookname','author','55.5','123456','','BSC','14','img'),'invalid input');
-        $this->assertFalse($this->DataHolder->sell('bookname','author','55.5','123456','Science','','','img'),'invalid input');
-        $this->assertFalse($this->DataHolder->sell('bookname','author','55.5','123456','Science','BSC','14',''),'invalid input');
-        $this->assertFalse($this->DataHolder->sell("","","","","","","",""),'invalid input');
+        
     }
 
 }
