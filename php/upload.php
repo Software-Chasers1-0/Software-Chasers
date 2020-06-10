@@ -35,14 +35,14 @@ class upload {
         $result = mysqli_query($link,
             "INSERT INTO books (book_isbn, book_name, book_author, book_price, book_image, user_id) 
             VALUES ('$isbn','$bookname', '$author', '$price', '$data','$user')");
-        if($result != false) {
+       // if($result != false) {
             mysqli_query($link,"INSERT IGNORE INTO SubCategories (category_id, subcategory_name) 
                 VALUES (0,'$school')");
             mysqli_query($link,"UPDATE SubCategories SET category_id =
                 (SELECT category_id FROM Categories WHERE category_name = '$faculty') WHERE category_id = '0';");
             mysqli_query($link,"UPDATE books SET subcategory_id =
                 (SELECT subcategory_id FROM SubCategories WHERE subcategory_name = '$school') WHERE subcategory_id = '0';");
-        }
+      //  }
         
         $link->close();
         
