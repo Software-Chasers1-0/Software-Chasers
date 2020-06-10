@@ -34,7 +34,7 @@ class upload {
         //echo "3.5";
         $result = mysqli_query($link,
             "INSERT INTO books (book_isbn, book_name, book_author, book_price, book_image, user_id) 
-            VALUES ('$isbn','$bookname', '$author', '$price', '$dataUrl','$user')");
+            VALUES ('$isbn','$bookname', '$author', '$price', '$data','$user')");
         if($result != false) {
             mysqli_query($link,"INSERT IGNORE INTO SubCategories (category_id, subcategory_name) 
                 VALUES (0,'$school')");
