@@ -21,8 +21,15 @@ class uploadTest extends TestCase{
     public function test_if_Empty()
     {
         $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2','data:;base64,'));
-        //$this->assertNotEmpty($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2','data:;base64,'));
-        
+        $this->assertFalse($this->DataHolder->sell('','rosematy sutcliff','225','0192770950','Science','BSC','2','data:;base64,'),'invalid input');
+        $this->assertFalse($this->DataHolder->sell('warrior scarlet','','225','0192770950','Science','BSC','2','data:;base64,'),'invalid input');
+        $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','','0192770950','Science','BSC','2','data:;base64,'),'invalid input');
+        $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','','Science','BSC','2','data:;base64,'),'invalid input');
+        $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','','BSC','2','data:;base64,'),'invalid input');
+        $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','','2','data:;base64,'),'invalid input');
+        $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','','data:;base64,'),'invalid input');
+        $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2','data:'),'invalid input);
+        $this->assertFalse($this->DataHolder->sell("","","","","","","",""),'invalid input');
     }
 
 }
