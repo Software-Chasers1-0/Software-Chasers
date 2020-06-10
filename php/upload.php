@@ -45,8 +45,13 @@ class upload {
         }
         
         $link->close();
+        
+        if(is_bool($result)) {
+            return $result;
+        }
         #echo "connected successfully <br />";
         //echo json_encode($result);
+        
         $arr = array();
         while ($row = mysqli_fetch_assoc($result)) {
             #echo json_encode($result);
