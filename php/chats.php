@@ -25,14 +25,14 @@ class chats {
                 ) LIMIT 1;"
             );
         }
-        else {
-            $result = mysqli_query($link,
-                "SELECT Chats.*,buyer.user_name AS buyer_name,seller.user_name AS seller_name FROM Chats 
-                LEFT JOIN users AS buyer ON buyer.user_id = Chats.buyer_id 
-                LEFT JOIN users AS seller ON seller.user_id = Chats.seller_id
-                WHERE Chats.buyer_id = '$buyer' OR Chats.seller_id = '$buyer' ORDER BY Chats.chat_id DESC;"
-            );
-        }
+        //else {
+            //$result = mysqli_query($link,
+                //"SELECT Chats.*,buyer.user_name AS buyer_name,seller.user_name AS seller_name FROM Chats 
+               // LEFT JOIN users AS buyer ON buyer.user_id = Chats.buyer_id 
+                //LEFT JOIN users AS seller ON seller.user_id = Chats.seller_id
+                //WHERE Chats.buyer_id = '$buyer' OR Chats.seller_id = '$buyer' ORDER BY Chats.chat_id DESC;"
+            //);
+        //}
         
         $link->close();
         #echo "connected successfully <br />";
