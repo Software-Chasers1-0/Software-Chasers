@@ -41,7 +41,7 @@ class upload {
             mysqli_query($link,"UPDATE SubCategories SET category_id =
                 (SELECT category_id FROM Categories WHERE category_name = '$faculty') WHERE category_id = '0';");
             mysqli_query($link,"UPDATE books SET subcategory_id =
-                (SELECT subcategory_id FROM SubCategories WHERE subcategory_name = '$school') WHERE subcategory_id = '0'");
+                (SELECT subcategory_id FROM SubCategories WHERE subcategory_name = '$school') WHERE subcategory_id = '0';");
         }
         
         $link->close();
