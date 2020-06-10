@@ -28,8 +28,8 @@ class uploadTest extends TestCase{
         $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','','BSC','2','data:;base64,'),'invalid input');
         $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','','2','data:;base64,'),'invalid input');
         $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','','data:;base64,'),'invalid input');
-        $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2','data:'),'invalid input);
-        $this->assertFalse($this->DataHolder->sell("","","","","","","",""),'invalid input');
+        $this->assertFalse($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2',''),'invalid input);
+        //$this->assertInvalid($this->DataHolder->sell('','','','','','','',''));
     }
 
 }
