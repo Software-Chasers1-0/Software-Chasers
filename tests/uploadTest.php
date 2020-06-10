@@ -23,7 +23,7 @@ class uploadTest extends PHPUnit\Framework\TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertTrue($this->DataHolder->sell('bookname','author','55.5','123456','Science','BSC','14','img'));
+        $this->assertFalse($this->DataHolder->sell('bookname','author','55.5','123456','Science','BSC','14','img'));
     }
 
 }
