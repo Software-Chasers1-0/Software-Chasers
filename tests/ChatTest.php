@@ -24,7 +24,7 @@ class ChatTest extends TestCase{
     }
     public function test_if_works()
     {
-        $this->assertTrue($this->DataHolder->chat('61','46','chat');
+        $this->assertTrue($this->DataHolder->chat('61','46','chat'));
     }
 }
 ?>
