@@ -33,7 +33,9 @@ class chats {
                 //WHERE Chats.buyer_id = '$buyer' OR Chats.seller_id = '$buyer' ORDER BY Chats.chat_id DESC;"
             //);
         //}
-        
+        if(is_bool($result)) {
+            return $result;
+        }
         $link->close();
         #echo "connected successfully <br />";
         #echo json_encode($result);
