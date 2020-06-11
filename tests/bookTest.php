@@ -17,7 +17,7 @@ class bookTest extends TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertNotEmpty($this->DataHolder, "It is empty");
+        
     }
 }
 ?>
