@@ -25,7 +25,7 @@ class uploadTest extends TestCase{
    */
     public function test_if_Empty()
     {
-        $this->assertNotEmpty($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2','data:;base64,'));
+        $this->assertNotEmpty(\json_decode($this->DataHolder->sell('warrior scarlet','rosematy sutcliff','225','0192770950','Science','BSC','2','data:;base64,')));
     }
 
 }
